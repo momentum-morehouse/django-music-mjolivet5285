@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block content %}
+
+<div>
+	{% for album in albums %}
+	
+		<span class="bg-black-90 lh-copy white pa1 tracked-tight">
+    {{album.title}}
+    </span>
+	
+	<p>
+		{{album.artist_name}}
+	</p>
+	<p>
+		{{album.date_released}}
+	</p>
+  {% endfor %}
+</div>
+
+{% endblock %}
