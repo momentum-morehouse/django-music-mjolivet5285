@@ -1,15 +1,17 @@
 {% extends 'base.html' %} {% block content %}
 
+<h1>catus jack</h1>
+
 <div>
 	{% for album in albums %}
 	<p>
-    {{album.title}}
+    {{ album.title }}
 	</p>
 	<p>
-		{{album.artist_name}}
+		{{ album.artist_name }}
 	</p>
 	<p>
-		{{album.date_released}}
+		{{ album.date_released }}
 	</p>
   {% endfor %}
 </div>
