@@ -16,12 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.conf import settings
 from django.urls import include, path
-from unchained_project import views as album_views
+from unchained_project import views as unchained_project_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', album_views.index, name='home'),
-    #path('add/', album_views.add_album, name='add_album')
+    path('', unchained_project_views.index, name='home'),
+    path('add/', unchained_project_views.add_album, name='add_album'),
 ]
 
 if settings.DEBUG:
