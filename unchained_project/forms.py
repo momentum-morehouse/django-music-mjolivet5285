@@ -1,7 +1,8 @@
 from django import forms
 from .models import Album
 
-class albumForm(forms.ModelForm):
+
+class AlbumForm(forms.ModelForm):
     class Meta:
         model = Album
         fields = [
@@ -9,8 +10,4 @@ class albumForm(forms.ModelForm):
             'title',
             'date_released',
         ]
-        #widgets = {'birthday': forms.SelectDateWidget()
-        #}
-
-
 

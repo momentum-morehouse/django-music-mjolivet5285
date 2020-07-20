@@ -21,7 +21,9 @@ from unchained_project import views as unchained_project_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', unchained_project_views.index, name='home'),
-    path('add/', unchained_project_views.add_album, name='add_album'),
+    path('unchained_project/add/', unchained_project_views.add_album, name='add_album'),
+    path('unchained_project/<int:pk>/delete/', unchained_project_views.delete_album, name='delete_album'),
+    path('unchained_project/<int:pk>/edit/',unchained_project_views.edit_album, name='edit_album'),
 ]
 
 if settings.DEBUG:

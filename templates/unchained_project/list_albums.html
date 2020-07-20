@@ -1,4 +1,9 @@
-{% extends 'base.html' %} {% block content %}
+{% extends "base.html" %} {% block content %}
+<h1>All albums</h1>
+<a href="{% url 'add_album'%}">Add New Albums</a>
+
+
+
 
 <div>
 	{% for album in albums %}
@@ -13,6 +18,7 @@
 	<p>
 		{{album.date_released}}
 	</p>
+  <a href="{% url 'delete_album' pk=album.pk %}">Delete Current Album</a>
   {% endfor %}
 </div>
 
